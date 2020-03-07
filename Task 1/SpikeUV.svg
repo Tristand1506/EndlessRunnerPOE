@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1080" height="1080" viewBox="0 0 1080 1080"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<desc>, (Blender 2.82 (sub 7))</desc>
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0" points="405.000,270.000 805.781,0.000 405.000,0.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0" points="405.000,1080.000 805.781,810.000 405.000,810.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0" points="135.000,540.000 405.000,540.000 405.000,270.000 135.000,270.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0" points="405.000,540.000 805.781,270.000 405.000,270.000 " />
+<polygon stroke="black" stroke-width="1" fill="rgb(204, 204, 204)" fill-opacity="0" points="405.000,810.000 805.781,540.000 405.000,540.000 " />
+
+</svg>
