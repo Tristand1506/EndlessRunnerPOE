@@ -15,15 +15,15 @@ public class SpawnObsacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        obstacles = new int[5, 3];
+        obstacles = new int[5, 2];
 
 
         for (int x = 0; x < 5; x++)
         {
-            for (int y = 0; y < 3; y++)
+            for (int y = 0; y < 2; y++)
             {
                 GameObject spawned;
-                obstacles[x, y] = Random.Range(0, 30);
+                obstacles[x, y] = Random.Range(0, 20);
 
                 Vector3 pos = new Vector3(this.transform.position.x - 4 +(x*2), 0, this.transform.position.z + 2 - (y*2));
 
@@ -33,7 +33,7 @@ public class SpawnObsacle : MonoBehaviour
                         spawned = Object.Instantiate(spike, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
                         break;
-                    case 20:
+                    case 12:
                         spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
                         break;
@@ -49,17 +49,7 @@ public class SpawnObsacle : MonoBehaviour
             }
         }
 
-        for (int j = 0; j < 3; j++)
-        {
-            string adx = "";
-            for (int i = 0; i < 5; i++)
-            {
-                adx += obstacles[i, j] + "-";
-
-
-            }
-            Debug.Log(j + ":" + adx);
-        }
+        
     }
 
     // Update is called once per frame
