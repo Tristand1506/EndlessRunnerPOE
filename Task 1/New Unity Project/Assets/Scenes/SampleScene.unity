@@ -184,7 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8b202720540834591983883573f5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corridor: {fileID: 7431572051201400401, guid: 7524840f5e9055348bd5b3143b4e0417,
+  corridorSpawn: {fileID: 7431572051201400401, guid: 7524840f5e9055348bd5b3143b4e0417,
+    type: 3}
+  corridorStart: {fileID: 7431572051201400401, guid: 1896174692d179d489c11e9953150409,
     type: 3}
   forwardTileCount: 20
 --- !u!1 &1953213812
@@ -216,6 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6942ccff360e4f6409499a8b7f8786e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnim: {fileID: 3159259484116638103, guid: 79e001257acad39469a1821eee8c810a,
+    type: 3}
   player: {fileID: 6410342822397621465, guid: 79e001257acad39469a1821eee8c810a, type: 3}
   mainCamera: {fileID: 5797187056744711671, guid: 3c131940c6cfc8e4f9ce5b443c49ce71,
     type: 3}

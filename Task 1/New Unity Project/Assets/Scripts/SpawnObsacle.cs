@@ -23,7 +23,7 @@ public class SpawnObsacle : MonoBehaviour
             for (int y = 0; y < 2; y++)
             {
                 GameObject spawned;
-                obstacles[x, y] = Random.Range(0, 20);
+                obstacles[x, y] = Random.Range(0, 50);
 
                 Vector3 pos = new Vector3(this.transform.position.x - 4 +(x*2), 0, this.transform.position.z + 2 - (y*2));
 
@@ -37,10 +37,45 @@ public class SpawnObsacle : MonoBehaviour
                         spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
                         break;
+                    case 21:
+                        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
+                    case 37:
+                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
                     case 15:
                         spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
                         break;
+
+                    case 35:
+                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
+                    case 31:
+                        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
+                    case 29:
+                        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
+                    case 48:
+                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
+                    case 39:
+                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
+
+                    case 25:
+                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                        spawned.transform.SetParent(this.transform);
+                        break;
+
 
                     default:
                         break;

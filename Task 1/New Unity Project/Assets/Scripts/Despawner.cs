@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Despawner : MonoBehaviour
 {
-    public GameObject corridor;
+    public GameObject corridorSpawn;
+    public GameObject corridorStart;
     public int forwardTileCount;
     int zProgress;
     void Start()
@@ -12,7 +13,7 @@ public class Despawner : MonoBehaviour
         zProgress = 0;
         for (int i = 0; i < forwardTileCount; i++)
         {
-            Object.Instantiate(corridor, new Vector3(0, 0, zProgress), Quaternion.identity);
+            Object.Instantiate(corridorStart, new Vector3(0, 0, zProgress), Quaternion.identity);
             zProgress += 6;
         }
     }
@@ -24,7 +25,7 @@ public class Despawner : MonoBehaviour
         if (collider.gameObject.tag=="Enviroment")
         {
             Destroy(collider.gameObject);
-            Object.Instantiate(corridor, new Vector3(0, 0, zProgress), Quaternion.identity);
+            Object.Instantiate(corridorSpawn, new Vector3(0, 0, zProgress), Quaternion.identity);
             zProgress += 6;
         }
         
