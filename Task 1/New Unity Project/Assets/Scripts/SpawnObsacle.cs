@@ -23,7 +23,7 @@ public class SpawnObsacle : MonoBehaviour
             for (int y = 0; y < 2; y++)
             {
                 GameObject spawned;
-                obstacles[x, y] = Random.Range(0, 50);
+                obstacles[x, y] = Random.Range(0, 70);
 
                 Vector3 pos = new Vector3(this.transform.position.x - 4 +(x*2), 0, this.transform.position.z + 2 - (y*2));
 

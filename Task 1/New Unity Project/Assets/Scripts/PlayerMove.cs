@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public Animator playerAnim;
     public GameObject player;
+    public ParticleSystem sparks;
     public Camera mainCamera;
     public float speed;
     int lane;
@@ -16,7 +17,7 @@ public class PlayerMove : MonoBehaviour
         
        player = Object.Instantiate(player, new Vector3(0, 1, 5), Quaternion.Euler(-90,0,0));
         player.transform.SetParent(this.transform);
-        playerAnim = player.GetComponent<Animator>();
+        playerAnim = player.transform.GetChild(0).GetComponent<Animator>();
 
         lane = 0;
         
@@ -27,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     {
         this.transform.Translate(Vector3.forward*Time.deltaTime*speed);
 
-        if (Input.GetKeyDown("left"))
+        if (Input.GetKeyDown("left") && !playerAnim.GetBool("Grind"))
         {
             if (lane != Mathf.Clamp(lane - 1, -2, 2))
             {
@@ -36,7 +37,7 @@ public class PlayerMove : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown("right"))
+        if (Input.GetKeyDown("right")&&!playerAnim.GetBool("Grind"))
         {
             if (lane != Mathf.Clamp(lane + 1, -2, 2))
             {
@@ -48,11 +49,18 @@ public class PlayerMove : MonoBehaviour
         {
 
             Debug.Log("Slammin!!!");
-            playerAnim.SetTrigger("slamin");
+            playerAnim.SetBool("Grind",true);
+
+        }
+        if (Input.GetKeyUp("down"))
+        {
+
+            Debug.Log("SlamminOFF");
+            playerAnim.SetBool("Grind", false);
 
         }
 
-        
+
 
 
     }

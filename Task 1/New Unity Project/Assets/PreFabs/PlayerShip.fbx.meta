@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: f4d300f8e9b07754193a51b04a8ac0a7
+guid: 6918386820ba4694da328a987512da2d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: -623603649343465320
-    second: Scene
+      74: 20459412815550033
+    second: Cube|Grind
+  - first:
+      74: 2131864205095655572
+    second: Cube|Idle
   externalObjects: {}
   materials:
     materialImportMode: 1
