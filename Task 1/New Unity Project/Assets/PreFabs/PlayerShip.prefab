@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46a825e5c3c625469027eaeb4cbcaef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sense: 0.3
+  sense: 0.5
 --- !u!1 &6410342822397621465
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,37 +203,37 @@ PrefabInstance:
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0007
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0179
+      value: 0.0221
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0016
+      value: 0.0027
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.073969
+      value: -0.184393
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.066164404
+      value: 0.16493715
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7416541
+      value: 0.7221644
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6634004
+      value: 0.6459672
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
@@ -243,17 +243,17 @@ PrefabInstance:
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -11.320001
+      value: -28.454
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -1.2820001
+      value: -3.4710002
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 96.503006
+      value: 97.256004
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447701, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
@@ -279,6 +279,36 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315575973990447702, guid: 31dc099e5bda05344b65e4dddaee7e2f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315575973990447702, guid: 31dc099e5bda05344b65e4dddaee7e2f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315575973990447702, guid: 31dc099e5bda05344b65e4dddaee7e2f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.9705882
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315575973990447702, guid: 31dc099e5bda05344b65e4dddaee7e2f,
+        type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: 4.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315575973990447702, guid: 31dc099e5bda05344b65e4dddaee7e2f,
+        type: 3}
+      propertyPath: ShapeModule.m_Rotation.x
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315575973990447702, guid: 31dc099e5bda05344b65e4dddaee7e2f,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 8315575973990447704, guid: 31dc099e5bda05344b65e4dddaee7e2f,
         type: 3}
