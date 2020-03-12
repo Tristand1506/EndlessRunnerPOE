@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enviroment
   - DeathWall
+  - Effect
   layers:
   - Default
   - TransparentFX
