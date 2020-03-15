@@ -22,6 +22,7 @@ public class DamageManager: MonoBehaviour
         if (collision.transform.tag== "Enviroment")
         {
             Debug.Log("You Did A Crash!!!");
+            // minus one life
         }
     }
 }
