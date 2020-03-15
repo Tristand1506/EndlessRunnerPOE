@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    int lives;
     public Animator playerAnim;
     public GameObject player;
-    public ParticleSystem sparks;
+    public ParticleSystem strafeBlastR;
+    public ParticleSystem strafeBlastL;
     public TrailRenderer neonTrail;
     public Camera mainCamera;
     public float speed;
@@ -20,7 +22,9 @@ public class PlayerMove : MonoBehaviour
         player.transform.SetParent(this.transform);
         playerAnim = player.transform.GetChild(0).GetComponent<Animator>();
         neonTrail = player.transform.GetChild(0).GetChild(1).GetComponent<TrailRenderer>();
-        
+        strafeBlastR = player.transform.GetChild(1).GetComponent<ParticleSystem>();
+        strafeBlastL = player.transform.GetChild(2).GetComponent<ParticleSystem>();
+
         lane = 0;
         
     }
@@ -38,8 +42,10 @@ public class PlayerMove : MonoBehaviour
             if (lane != Mathf.Clamp(lane - 1, -2, 2))
             {
                 lane = Mathf.Clamp(lane - 1, -2, 2);
-                player.transform.Translate(Vector3.left * 2);
                 playerAnim.SetBool("Left", true);
+                strafeBlastL.Play();
+                player.transform.Translate(Vector3.left * 2);
+                
             }
             
         }
@@ -49,8 +55,10 @@ public class PlayerMove : MonoBehaviour
             {
                 
                 lane = Mathf.Clamp(lane + 1, -2, 2);
-                player.transform.Translate(Vector3.right * 2);
+                strafeBlastR.Play();
                 playerAnim.SetBool("Right", true);
+                player.transform.Translate(Vector3.right * 2);
+                
             }
         }
         if (Input.GetKeyDown("down"))

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SparkSystem : MonoBehaviour
 {
     private ParticleSystem _particleSystem;
-    public float sense = 0.5f;
+    public float sense = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +15,19 @@ public class SparkSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            _particleSystem.enableEmission = Physics.Raycast(transform.position, Vector3.down, sense);
-        
+        RaycastHit hit;
+            //_particleSystem.enableEmission = Physics.Raycast(transform.position, Vector3.down, sense);
+        if (Physics.Raycast(transform.position, Vector3.down,out hit, sense))
+        {
+            _particleSystem.enableEmission = true;
+            Debug.Log(Vector3.Distance(transform.position,hit.point));
+        }
+        else
+        {
+            _particleSystem.enableEmission = false;
+
+        }
+
     }
     private void OnDrawGizmos()
     {
