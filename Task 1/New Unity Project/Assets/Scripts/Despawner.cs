@@ -21,7 +21,7 @@ public class Despawner : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Destroying object: " + collider.gameObject);
+        //Debug.Log("Destroying object: " + collider.gameObject);
         if (collider.gameObject.tag=="Enviroment")
         {
             Destroy(collider.gameObject);

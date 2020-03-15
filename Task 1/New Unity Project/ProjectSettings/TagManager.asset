@@ -7,6 +7,10 @@ TagManager:
   - Enviroment
   - DeathWall
   - Effect
+  - CanDamage
+  - ScoreManager
+  - Controller
+  - UI
   layers:
   - Default
   - TransparentFX

@@ -19,8 +19,9 @@ public class DamageManager: MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.transform.tag== "Enviroment")
+        if (collision.transform.tag== "CanDamage")
         {
+            GameObject.FindGameObjectWithTag("Controller").GetComponent<PlayerController>().LoseLife();
             Debug.Log("You Did A Crash!!!");
             // minus one life
         }

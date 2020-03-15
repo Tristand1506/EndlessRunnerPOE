@@ -7,6 +7,8 @@ public class SpawnObsacle : MonoBehaviour
     public GameObject barrSmall;
     public GameObject barrLarge;
     public GameObject spike;
+    public GameObject GrindStone;
+    public GameObject missilePack;
     int[,] obstacles;
     
    
@@ -23,64 +25,95 @@ public class SpawnObsacle : MonoBehaviour
             for (int y = 0; y < 2; y++)
             {
                 GameObject spawned;
-                obstacles[x, y] = Random.Range(0, 70);
+                obstacles[x, y] = Random.Range(0, 100);
 
                 Vector3 pos = new Vector3(this.transform.position.x - 4 +(x*2), 0, this.transform.position.z + 2 - (y*2));
 
-                switch (obstacles[x,y])
+                if (obstacles[x,y] < 15)
                 {
-                    case 10:
+                    int spawnin = Random.Range(0,100);
+
+                    if (spawnin <= 5)
+                    {
                         spawned = Object.Instantiate(spike, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
-                        break;
-                    case 12:
+                    }
+                    else if (spawnin <= 30)
+                    {
                         spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
-                        break;
-                    case 21:
-                        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
-                        spawned.transform.SetParent(this.transform);
-                        break;
-                    case 37:
+                    }
+                    else if (spawnin <= 65)
+                    {
                         spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
-                        break;
-                    case 15:
-                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                    }
+                    else if (spawnin <= 100)
+                    {
+                        spawned = Object.Instantiate(GrindStone, pos, Quaternion.identity);
                         spawned.transform.SetParent(this.transform);
-                        break;
-
-                    case 35:
-                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
-                        spawned.transform.SetParent(this.transform);
-                        break;
-                    case 31:
-                        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
-                        spawned.transform.SetParent(this.transform);
-                        break;
-                    case 29:
-                        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
-                        spawned.transform.SetParent(this.transform);
-                        break;
-                    case 48:
-                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
-                        spawned.transform.SetParent(this.transform);
-                        break;
-                    case 39:
-                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
-                        spawned.transform.SetParent(this.transform);
-                        break;
-
-                    case 25:
-                        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
-                        spawned.transform.SetParent(this.transform);
-                        break;
-
-
-                    default:
-                        break;
-                        
+                    }
                 }
+                if (obstacles[x, y]>=99)
+                {
+                    spawned = Object.Instantiate(missilePack, pos, Quaternion.identity);
+                    spawned.transform.SetParent(this.transform);
+                }
+                
+                //switch (obstacles[x,y])
+                //{
+                //    case 10:
+                //        spawned = Object.Instantiate(spike, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 12:
+                //        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 21:
+                //        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 37:
+                //        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 15:
+                //        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+
+                //    case 35:
+                //        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 31:
+                //        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 29:
+                //        spawned = Object.Instantiate(barrLarge, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 48:
+                //        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+                //    case 39:
+                //        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+
+                //    case 25:
+                //        spawned = Object.Instantiate(barrSmall, pos, Quaternion.identity);
+                //        spawned.transform.SetParent(this.transform);
+                //        break;
+
+
+                //    default:
+                //        break;
+                        
+                //}
             }
         }
 

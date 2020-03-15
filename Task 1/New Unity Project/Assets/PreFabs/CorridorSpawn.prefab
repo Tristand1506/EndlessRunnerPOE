@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 1620596329113392439}
   - component: {fileID: 2910948747622038070}
   m_Layer: 0
-  m_Name: Corridor 1
+  m_Name: CorridorSpawn
   m_TagString: Enviroment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,11 +552,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642fd29aa77920a4d998879d871c7f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrSmall: {fileID: 2523746583108120980, guid: bee676775cdde194e93396f612e4f041,
+  barrSmall: {fileID: 1420943585535874187, guid: 7496d84d492a8d14599c10a4dd1603f0,
     type: 3}
   barrLarge: {fileID: 3214027976382745267, guid: 1c8636ae8d375b84482f697f16152e27,
     type: 3}
   spike: {fileID: 3159635554158008249, guid: 944aeb387add87c498c114ef74661a9e, type: 3}
+  GrindStone: {fileID: 2517711855073618296, guid: 7cb0b548c6290b047b1f7038e770df82,
+    type: 3}
+  missilePack: {fileID: 1878853377875923822, guid: 5379178c0b64b92449c898764723bc66,
+    type: 3}
 --- !u!1 &9188944601201827033
 GameObject:
   m_ObjectHideFlags: 0

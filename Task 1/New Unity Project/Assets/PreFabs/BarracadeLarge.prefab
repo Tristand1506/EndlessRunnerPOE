@@ -109,9 +109,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1383393548712463615}
   - component: {fileID: 5071926589474378705}
+  - component: {fileID: 855192186346111498}
   m_Layer: 0
   m_Name: BarracadeLarge
-  m_TagString: Enviroment
+  m_TagString: CanDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,6 +147,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 4, z: 2}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &855192186346111498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214027976382745267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06173fbe2d4acbb4bb19732b30fe84fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8605077597553579464
 GameObject:
   m_ObjectHideFlags: 0
