@@ -15,11 +15,7 @@ public class SparkSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
-        _particleSystem.enableEmission = Physics.Raycast(transform.position, Vector3.down, sense);
-
-        
+         _particleSystem.enableEmission = Physics.Raycast(transform.position, Vector3.down, sense);
 
     }
     private void OnDrawGizmos()

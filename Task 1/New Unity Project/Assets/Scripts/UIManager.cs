@@ -22,19 +22,18 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lives.GetComponent<Text>().text = "Lives: "+player.GetComponent<PlayerController>().GetLives();
+        score.GetComponent<Text>().text = "" + GameManager.instance.GetScore();
 
-        if (player.GetComponent<PlayerController>().GetLives() == 0) 
-        {
-            this.transform.GetChild(3).GetComponent<Text>().enabled = true;
-        }
+        lives.GetComponent<Text>().text = "Lives: "+PlayerController.instance.health;
+
+        //if (GameManager.instance.health == 0) 
+        //{
+        //    this.transform.GetChild(3).GetComponent<Text>().enabled = true;
+        //}
 
         missile.GetComponent<Text>().text = player.transform.GetChild(2).GetComponent<Shoot>().GetMissiles() + " :Missiles";    
     }
 
-    public void UpdateScore(int scoreIn)
-    {
-        score.GetComponent<Text>().text = "" + scoreIn;
-    }
+   
 
 }

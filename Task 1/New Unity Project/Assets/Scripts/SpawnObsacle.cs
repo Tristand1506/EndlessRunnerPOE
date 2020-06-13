@@ -35,7 +35,7 @@ public class SpawnObsacle : MonoBehaviour
 
                     if (spawnin <= 5)
                     {
-                        spawned = Object.Instantiate(spike, pos, Quaternion.identity);
+                        spawned = Object.Instantiate(spike, pos, spike.transform.rotation);
                         spawned.transform.SetParent(this.transform);
                     }
                     else if (spawnin <= 30)

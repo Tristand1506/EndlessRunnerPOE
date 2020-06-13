@@ -22,15 +22,8 @@ public class PickupMissile : MonoBehaviour
                 Destroy(this.gameObject);
             }
             catch (System.Exception)
-            {
-
-                
+            {            
             }
-            
-            
         }
-
-        
-        
     }
 }

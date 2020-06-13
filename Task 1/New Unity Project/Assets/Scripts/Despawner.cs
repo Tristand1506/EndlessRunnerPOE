@@ -10,9 +10,11 @@ public class Despawner : MonoBehaviour
     int zProgress;
     void Start()
     {
+        //tracks the current z position of tlie spawm for initial blank spawn
         zProgress = 0;
         for (int i = 0; i < forwardTileCount; i++)
         {
+            //spawns corridor at "zProgress" and ofsets it by 6
             Object.Instantiate(corridorStart, new Vector3(0, 0, zProgress), Quaternion.identity);
             zProgress += 6;
         }
@@ -22,7 +24,7 @@ public class Despawner : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         //Debug.Log("Destroying object: " + collider.gameObject);
-        if (collider.gameObject.tag=="Enviroment")
+        if (collider.gameObject.tag == "Enviroment")
         {
             Destroy(collider.gameObject);
             Object.Instantiate(corridorSpawn, new Vector3(0, 0, zProgress), Quaternion.identity);

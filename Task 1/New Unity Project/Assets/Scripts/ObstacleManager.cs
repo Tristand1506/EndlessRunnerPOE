@@ -20,7 +20,7 @@ public class ObstacleManager : MonoBehaviour
     {
         if (!hasScored && this.transform.position.z < player.transform.position.z)
         {
-            scoreManager.GetComponent<ScoreManager>().scoreUp();
+            GameManager.instance.ScoreIncriment();
             hasScored = true;
         }
     }

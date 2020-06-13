@@ -556,7 +556,7 @@ MonoBehaviour:
     type: 3}
   barrLarge: {fileID: 3214027976382745267, guid: 1c8636ae8d375b84482f697f16152e27,
     type: 3}
-  spike: {fileID: 3159635554158008249, guid: 944aeb387add87c498c114ef74661a9e, type: 3}
+  spike: {fileID: 7540072137305397055, guid: 9eed2337f929a0f4db87723acf784acf, type: 3}
   GrindStone: {fileID: 2517711855073618296, guid: 7cb0b548c6290b047b1f7038e770df82,
     type: 3}
   missilePack: {fileID: 1878853377875923822, guid: 5379178c0b64b92449c898764723bc66,
