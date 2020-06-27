@@ -561,6 +561,9 @@ MonoBehaviour:
     type: 3}
   missilePack: {fileID: 1878853377875923822, guid: 5379178c0b64b92449c898764723bc66,
     type: 3}
+  healthWrench: {fileID: 7723587856371550784, guid: 8e987effc0bf4d248bd45091329f285f,
+    type: 3}
+  wings: {fileID: 3855701714751879483, guid: 0abe8e7700b0e644b9e48b236ca2f164, type: 3}
 --- !u!1 &9188944601201827033
 GameObject:
   m_ObjectHideFlags: 0

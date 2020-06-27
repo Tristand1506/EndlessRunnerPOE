@@ -4971,7 +4971,7 @@ GameObject:
   - component: {fileID: 5112505070835322020}
   m_Layer: 0
   m_Name: PlayerShip
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5075,7 +5075,7 @@ GameObject:
   - component: {fileID: 3246088459398141064}
   - component: {fileID: 3963216612408017758}
   m_Layer: 0
-  m_Name: Trail
+  m_Name: PlayerTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5089,7 +5089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314749388579793213}
   m_LocalRotation: {x: 0.74824286, y: -0, z: -0, w: 0.66342497}
-  m_LocalPosition: {x: 0.0001, y: 0.0049, z: -0.0009}
+  m_LocalPosition: {x: 0.0001, y: 0.0049, z: -0.0001}
   m_LocalScale: {x: 0.016666664, y: 0.016666664, z: 0.016666664}
   m_Children: []
   m_Father: {fileID: 4539357130953892729}
@@ -5194,7 +5194,7 @@ TrailRenderer:
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
-    alignment: 1
+    alignment: 0
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0

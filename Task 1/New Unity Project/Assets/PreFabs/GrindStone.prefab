@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2517711855073618295}
   - component: {fileID: 2517711855073618294}
   - component: {fileID: 2517711855073618297}
-  - component: {fileID: 7186482488423798491}
+  - component: {fileID: 8983138970135579315}
   m_Layer: 0
   m_Name: GrindStone
   m_TagString: CanDamage
@@ -94,7 +94,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8, z: 1}
   m_Center: {x: 0, y: -0.1, z: 0}
---- !u!114 &7186482488423798491
+--- !u!114 &8983138970135579315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,6 +103,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2517711855073618296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06173fbe2d4acbb4bb19732b30fe84fc, type: 3}
+  m_Script: {fileID: 11500000, guid: e76ccc2465f3dd4449389b0aae5eb14f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

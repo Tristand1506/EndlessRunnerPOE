@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
         //    this.transform.GetChild(3).GetComponent<Text>().enabled = true;
         //}
 
-        missile.GetComponent<Text>().text = player.transform.GetChild(2).GetComponent<Shoot>().GetMissiles() + " :Missiles";    
+        missile.GetComponent<Text>().text = PlayerController.instance.missileCount+ " :Missiles";    
     }
 
    

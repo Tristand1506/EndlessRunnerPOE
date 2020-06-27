@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-
+    private TrailRenderer trail;
     private Animator anim;
     private ParticleSystem leftBurst;
     private ParticleSystem rightBurst;
@@ -21,8 +21,9 @@ public class PlayerAnimator : MonoBehaviour
         PlayerController.instance.onGrindUp += grindOff;
         PlayerController.instance.onOof += damageFlash;
 
-        //playerTexture = this.gameObject.GetComponent<Material>();
+        playerTexture.EnableKeyword("_EMISSION");
         anim = this.gameObject.GetComponent<Animator>();
+        trail = GameObject.Find("PlayerTrail").GetComponent<TrailRenderer>();
         rightBurst = GameObject.Find("MoveRight").GetComponent<ParticleSystem>();
         leftBurst = GameObject.Find("MoveLeft").GetComponent<ParticleSystem>();
     }
@@ -56,12 +57,14 @@ public class PlayerAnimator : MonoBehaviour
     {
         Debug.Log("animating GrindDown...");
         anim.SetBool("isGrind", true);
+        trail.enabled = false;
     }
 
     void grindOff()
     {
         Debug.Log("animating GrindUp...");
         anim.SetBool("isGrind", false);
+        trail.enabled = true;
     }
 
     void damageFlash()

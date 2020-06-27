@@ -9,6 +9,7 @@ public class MissileBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speed += PlayerController.instance.speed;
         isAlive = true;
     }
 

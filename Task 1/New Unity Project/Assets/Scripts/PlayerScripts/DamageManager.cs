@@ -24,6 +24,12 @@ public class DamageManager: MonoBehaviour
             Debug.Log("You Did A Crash!!!");
             // minus one life
         }
+        if (collision.transform.tag == "Boost")
+        {
+            PlayerController.instance.SpeedUp(1f);
+            Debug.Log("Boost!!!");
+            //Incrimenmts speed by 1...
+        }
     }
 
     void immune()
