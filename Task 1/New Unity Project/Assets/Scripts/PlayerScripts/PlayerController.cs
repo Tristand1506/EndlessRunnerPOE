@@ -217,6 +217,13 @@ public class PlayerController : MonoBehaviour
     //Methods
     //#######
 
+    
+
+    public bool isFlying()
+    {
+        return flying;
+    }
+
     //speed up method
     public void SpeedUp()
     {
@@ -227,7 +234,15 @@ public class PlayerController : MonoBehaviour
         speed += increase;
     }
 
-    //damage method
+    //Get Sets
+
+    // gets speed variable
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
+    //Roblox method
     public void Oof(int damage)
     {
         //check if health at or lower than 0...
@@ -236,12 +251,14 @@ public class PlayerController : MonoBehaviour
             speed = 0;
             alive = false;
             onDeath?.Invoke();
+
+            Debug.Log("0 Health");
         }
         else
         {
             if (!flying)
             {
-                // subtracts damage andinvokes oof...
+                // subtracts damage and invokes oof...
                 health -= damage;
                 speed = speed * 0.4f;
 

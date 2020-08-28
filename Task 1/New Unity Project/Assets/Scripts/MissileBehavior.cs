@@ -6,11 +6,15 @@ public class MissileBehavior : MonoBehaviour
 {
     public float speed;
     bool isAlive;
+
+
     // Start is called before the first frame update
     void Start()
     {
         speed += PlayerController.instance.speed;
         isAlive = true;
+
+        AudioManager.instance.Play("ArcadeSounds_shot32");
     }
 
     // Update is called once per frame
@@ -28,8 +32,16 @@ public class MissileBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("CanDamage"))
         {
             //Debug.Log("hit");
-            Destroy(other.gameObject);
-            isAlive = false;
+            if (other.gameObject.GetComponent<Mine>() != null)
+            {
+                other.gameObject.GetComponent<Mine>().Explode();
+                isAlive = false;
+            }
+            else
+            {
+                Destroy(other.gameObject);
+                isAlive = false;
+            }
         }
     }
 }

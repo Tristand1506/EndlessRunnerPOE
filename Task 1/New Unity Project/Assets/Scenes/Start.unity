@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41357f929bba8b4d927b84102f18077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss1: {fileID: 5445525009698963348, guid: ee2b0dfb33a8ac442be14793b97fb040, type: 3}
 --- !u!4 &189927175
 Transform:
   m_ObjectHideFlags: 0
@@ -451,7 +452,39 @@ MonoBehaviour:
     type: 3}
   corridorStart: {fileID: 7431572051201400401, guid: 1896174692d179d489c11e9953150409,
     type: 3}
+  bossCorridor: {fileID: 7431572051201400401, guid: d05020d6bdd91b44baf0e8659c81297a,
+    type: 3}
   forwardTileCount: 20
+--- !u!1 &1184776771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184776772}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184776772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184776771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8925796, y: 24.313526, z: 75.01174}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308312076
 GameObject:
   m_ObjectHideFlags: 0

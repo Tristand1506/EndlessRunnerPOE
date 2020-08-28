@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamageManager: MonoBehaviour
 {
+
     // player hitbox
     BoxCollider hitBox;
 
@@ -18,9 +19,16 @@ public class DamageManager: MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("Collision");
         if (collision.transform.tag == "CanDamage")
         {
             PlayerController.instance.Oof(1);
+
+            if (collision.gameObject.GetComponent<Mine>() != null)
+            {
+                collision.gameObject.GetComponent<Mine>().Explode();
+            }
+
             Debug.Log("You Did A Crash!!!");
             // minus one life
         }
